@@ -3,16 +3,15 @@
     <main>
         <div class="row">
             <div class="post col s12 m12 l8 offset-l2">
-                <article class="animated fadeIn card hoverable">  
+                <article class="animated fadeIn card hoverable">
                     <div class="card-content">
                         <div class="card-content">
-                            
                             {{> shared_dateControl}}
                             <div class="valign-wrapper">
                                 {{! ** tag name **}}
                                 {{#has tag="booklist"}}
-                                    {{#if image}}
-                                        <img src="{{image}}" style="width:15%;" class="">
+                                    {{#if feature_image}}
+                                        <img src="{{img_url feature_image}}" style="width:15%;" class="">
                                     {{/if}}
                                     <div class="card-content"><h4 class="hvr-forward grey-text text-darken-2 valign">{{title}}</h4></div>
                                 {{else}}
@@ -29,9 +28,8 @@
                                     </a>
                                 </div>
                             {{/foreach}}
-                        </div> 
+                        </div>
                     </div>
-                        
                     <div class="divider"></div>
                     {{> spacing_oneRow}}
                     {{> spacing_oneRow}}
@@ -43,9 +41,7 @@
                     </div>
                     {{> spacing_oneRow}}
                     {{> spacing_oneRow}}
-                        
-                    {{> pagination}}                
-                    
+                    {{> pagination}}
                     <div class="divider"></div>
                     {{! disqus }}
                     <div class="card-content"><div class="card-content">{{> disqus}}</div></div> 

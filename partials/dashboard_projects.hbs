@@ -7,15 +7,15 @@
             </div>
         </li>
         <div class="divider"></div>
-        
+
         {{#get "posts" limit="all" filter="tag:projects"}}
             {{#foreach posts limit="3"}}
                 <li class="collection-item avatar">
-                    {{#if image}}
-                        <a href="{{meta_title}}" target="_blank"><img src="{{image}}" alt="" class="circle hoverable"></a>
+                    {{#if feature_image}}
+                        <a href="{{meta_title}}" target="_blank"><img src="{{img_url feature_image}}" alt="" class="circle hoverable"></a>
                     {{else}}
                         <img src="{{asset "img/SM_Light_small.jpg"}}">
-                    {{/if}} 
+                    {{/if}}
                     <span class="title"><a href="{{meta_title}}" class="grey-text text-darken-1" target="_blank">{{title}}</a></span>
                     <p><a href="{{meta_title}}" class="grey-text text-lighten-1" target="_blank">{{excerpt characters="75"}}&hellip;</a></p>
                 </li>
@@ -23,6 +23,3 @@
         {{/get}}
     </ul>
 </div>
-
-            
-
